@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefHeight="200.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="submenus.Controller">
+   <top>
+      <MenuBar prefHeight="26.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <menus>
+            <Menu mnemonicParsing="false" text="Clientes">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#menuRegistrar" text="Registrar" />
+                  <MenuItem mnemonicParsing="false" onAction="#menuModificar" text="Modificar" />
+                  <MenuItem mnemonicParsing="false" onAction="#menuEliminar" text="Eliminar" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+   </top>
+</BorderPane>
