@@ -19,4 +19,7 @@ public class MainLayout {
         System.out.println("Boton de abrir menu de modificar presionado");
         Main.loadPage("modificarMenu.fxml");
     }
+    
+    @FXML
+    private void menuCrearMembresia(){ Main.loadPage("crearMembresiaMenu.fxml"); }
 }

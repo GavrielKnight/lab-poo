@@ -16,6 +16,11 @@
                   <MenuItem mnemonicParsing="false" onAction="#menuModificar" text="Modificar" />
                </items>
             </Menu>
+            <Menu mnemonicParsing="false" text="Membresías">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#menuCrearMembresia" text="Crear" />
+               </items>
+            </Menu>
          </menus>
       </MenuBar>
    </top>

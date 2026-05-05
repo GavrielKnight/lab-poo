@@ -28,8 +28,8 @@
       <Label text="Tabla de Clientes:" GridPane.rowIndex="1" />
       <TableView fx:id="tablaClientes" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
         <columns>
-          <TableColumn fx:id="tablaClientes_colMatricula" prefWidth="75.0" text="Matricula" />
-          <TableColumn fx:id="tablaClientes_colNombre" prefWidth="75.0" text="Nombre" />
+          <TableColumn fx:id="colMatricula" prefWidth="75.0" text="Matricula" />
+          <TableColumn fx:id="colNombre" prefWidth="75.0" text="Nombre" />
         </columns>
       </TableView>
       <Button mnemonicParsing="false" onAction="#botonActualizarPresionado" text="Actualizar" GridPane.columnIndex="1" GridPane.rowIndex="2" />

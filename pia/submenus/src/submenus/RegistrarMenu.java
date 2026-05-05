@@ -6,6 +6,8 @@ import javafx.scene.control.TextField;
 
 public class RegistrarMenu {
     
+    String[] membresias = {"Básico", "Premium"};
+    
     @FXML
     private TextField nombreCampo;
     @FXML

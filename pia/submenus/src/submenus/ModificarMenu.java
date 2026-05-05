@@ -11,30 +11,37 @@ import javafx.scene.control.cell.PropertyValueFactory;
 
 public class ModificarMenu {
     
+    private void fillTable(){
+        // Adjunta los datos de los clientes en la tabla
+        ObservableList<Cliente> datos = FXCollections.observableArrayList(Main.clientes);
+        tablaClientes.setItems(datos);
+    }
+    
     @FXML
     private TableView tablaClientes;
     @FXML
-    private TableColumn tablaClientes_colNombre;
+    private TableColumn colNombre;
     @FXML
-    private TableColumn tablaClientes_colMatricula;
+    private TableColumn colMatricula;
     @FXML
     private Label label;
     @FXML
     private TextField idCampo;
     @FXML
     private TextField nombreCampo;
+    
+    @FXML
+    private void initialize(){
+        // Relaciona las columnas de la tabla con los atributos del cliente
+        colNombre.setCellValueFactory(new PropertyValueFactory<>("nombre"));
+        colMatricula.setCellValueFactory(new PropertyValueFactory<>("id"));
+        
+        // Llena la tabla con los datos de los clientes
+        fillTable();
+    }
      
     @FXML
-    private void botonActualizarPresionado(){
-
-        // Relaciona las columnas de la tabla con los atributos del cliente
-        tablaClientes_colNombre.setCellValueFactory(new PropertyValueFactory<>("nombre"));
-        tablaClientes_colMatricula.setCellValueFactory(new PropertyValueFactory<>("id"));
-        
-        // Adjunta los datos de los clientes en la tabla
-        ObservableList<Cliente> datos = FXCollections.observableArrayList(Main.clientes);
-        tablaClientes.setItems(datos);
-    }
+    private void botonActualizarPresionado(){ fillTable(); }
     
     @FXML
     private void botonModificarPresionado(){
