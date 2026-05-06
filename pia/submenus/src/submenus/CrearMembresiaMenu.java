@@ -53,6 +53,9 @@ public class CrearMembresiaMenu {
         // Adjunta nueva membresia
         Main.clientes.get(indice).asignarMembresia(tipoMembresia, fechaHoy, fechaVencimiento);
         
+        // Guarda los cambios
+        Main.guardaClientes();
+        
         // Notifica operacion exitosa
         label.setText("Se ha agregado una nueva membresia al usuario");
         

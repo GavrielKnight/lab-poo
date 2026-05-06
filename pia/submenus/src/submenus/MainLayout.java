@@ -20,6 +20,7 @@ public class MainLayout {
         Main.loadPage("modificarMenu.fxml");
     }
     
-    @FXML
-    private void menuCrearMembresia(){ Main.loadPage("crearMembresiaMenu.fxml"); }
+    @FXML private void menuCrearMembresia(){ Main.loadPage("crearMembresiaMenu.fxml"); }
+    
+    @FXML private void menuRenovarMembresia() { Main.loadPage("renovarMembresia.fxml"); }
 }

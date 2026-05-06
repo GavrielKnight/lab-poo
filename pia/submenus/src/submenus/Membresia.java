@@ -1,10 +1,12 @@
 package submenus;
 
-public class Membresia {
+import java.io.Serializable;
+
+public class Membresia implements Serializable {
     // Atributos
     private String tipo;
-    private String fechaInicio;
-    private String fechaVencimiento;
+    protected String fechaInicio;
+    protected String fechaVencimiento;
     
     // Constructor
     public Membresia(String tipo, String fechaInicio, String fechaVencimiento){

@@ -19,6 +19,7 @@
             <Menu mnemonicParsing="false" text="Membresías">
                <items>
                   <MenuItem mnemonicParsing="false" onAction="#menuCrearMembresia" text="Crear" />
+                  <MenuItem mnemonicParsing="false" onAction="#menuRenovarMembresia" text="Renovar" />
                </items>
             </Menu>
          </menus>
