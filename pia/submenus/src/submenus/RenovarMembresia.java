@@ -1,7 +1,5 @@
 package submenus;
 
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 import java.util.Optional;
 
 import javafx.fxml.FXML;
@@ -75,7 +73,7 @@ public class RenovarMembresia {
         // Checa que la matricula exista
         int indiceCliente = Main.idExiste(idCliente);
         if (indiceCliente == -1){
-            label.setText("No existe usuario con esa matricula");
+            Main.etiquetaRoja(label, "No existe usuario con esa matricula");
             return;
         }
         
@@ -86,7 +84,7 @@ public class RenovarMembresia {
         // Checa que el indice de la membresia exista
         int indiceMembresia = idMembresia - 1;
         if (indiceMembresia < 0 || indiceMembresia >= Main.clientes.get(indiceCliente).getMembresias().size()){
-            label.setText("No existe membresía con ese ID");
+            Main.etiquetaRoja(label, "No existe membresía con ese ID");
             return;
         }
   
@@ -94,6 +92,6 @@ public class RenovarMembresia {
         Main.clientes.get(indiceCliente).renovarMembresia(indiceMembresia);
         
         // Notifica operacion exitosa
-        label.setText("Se ha renovado la membresia con ID " + idMembresia + " del cliente con matricula " + idCliente);
+        Main.etiquetaVerde(label, "Se ha renovado la membresia con ID " + idMembresia + " del cliente con matricula " + idCliente);
     }
 }

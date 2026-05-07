@@ -23,6 +23,7 @@
       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
       <Label text="Tabla de Clientes:" GridPane.rowIndex="1" />
@@ -30,19 +31,22 @@
         <columns>
           <TableColumn fx:id="colMatricula" prefWidth="75.0" text="Matricula" />
           <TableColumn fx:id="colNombre" prefWidth="75.0" text="Nombre" />
+            <TableColumn fx:id="colEmail" prefWidth="75.0" text="Email" />
         </columns>
       </TableView>
       <Button mnemonicParsing="false" onAction="#botonActualizarPresionado" text="Actualizar" GridPane.columnIndex="1" GridPane.rowIndex="2" />
       <Label text="Matricula:" GridPane.rowIndex="3" />
       <TextField fx:id="idCampo" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-      <Label fx:id="label" GridPane.rowIndex="5" />
-      <Button mnemonicParsing="false" onAction="#botonModificarPresionado" text="Cambiar" GridPane.rowIndex="6" />
+      <Label fx:id="label" GridPane.rowIndex="6" />
+      <Button mnemonicParsing="false" onAction="#botonModificarPresionado" text="Cambiar" GridPane.rowIndex="7" />
       <Label text="Nuevo nombre:" GridPane.rowIndex="4" />
-      <TextField fx:id="nombreCampo" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+      <TextField fx:id="campoNombre" GridPane.columnIndex="1" GridPane.rowIndex="4" />
       <Label text="Modificar Clientes">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
+      <Label text="Nuevo email:" GridPane.rowIndex="5" />
+      <TextField fx:id="campoEmail" GridPane.columnIndex="1" GridPane.rowIndex="5" />
    </children>
 </GridPane>

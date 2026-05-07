@@ -8,12 +8,10 @@ public class RegistrarMenu {
     
     String[] membresias = {"Básico", "Premium"};
     
-    @FXML
-    private TextField nombreCampo;
-    @FXML
-    private TextField idCampo;
-    @FXML
-    private Label label;
+    @FXML private TextField nombreCampo;
+    @FXML private TextField idCampo;
+    @FXML private TextField campoEmail;
+    @FXML private Label label;
     
     @FXML 
     private void botonRegistrarPresionado(){
@@ -25,19 +23,26 @@ public class RegistrarMenu {
         
         // Verifica que el id ingresado no exista
         if (Main.idExiste(id) != -1){
-            label.setText("Ya existe cliente con esa matricula");
+            Main.etiquetaRoja(label, "Ya existe cliente con esa matricula");
             return;
         }
         
         // Obten y valida el nombre escrito en el campo
         String nombre = nombreCampo.getText().trim();
         if (nombre == ""){
-            label.setText("El campo del nombre no debe estar vacio");
+            Main.etiquetaRoja(label, "El campo del nombre no debe estar vacio");
+            return;
+        }
+        
+        // Obten y valida el email escrito en el campo
+        String email = campoEmail.getText().trim();
+        if (email == ""){
+            Main.etiquetaRoja(label, "El campo del correo electronico no debe estar vacio");
             return;
         }
 
         // Adjunta nuevo cliente a la lista
-        Main.clientes.add(new Cliente(id, nombre));
+        Main.clientes.add(new Cliente(id, nombre, email));
         
         // Guarda los datos de los clientes en el archivo serial
         Main.guardaClientes();
@@ -45,6 +50,6 @@ public class RegistrarMenu {
         // Notificar al usuario que el cliente se ha registrado
         System.out.println("Se ha registrado un cliente");
         for (Cliente c : Main.clientes) c.imprime();
-        label.setText("Se ha registrado un cliente");
+        Main.etiquetaVerde(label, "Se ha registrado un cliente");
     }
 }

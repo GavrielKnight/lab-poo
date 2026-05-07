@@ -6,8 +6,11 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
+
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -107,15 +110,30 @@ public class Main extends Application {
         return -1;
     }
     
+    public static void etiquetaRoja(Label label, String msg) {
+        label.setStyle("-fx-text-fill: red;");
+        label.setText(msg);
+    }
+    
+    public static void etiquetaVerde(Label label, String msg) {
+        label.setStyle("-fx-text-fill: green;");
+        label.setText(msg);
+    }
+    
     public static int validaCampoNumerico(TextField campo, Label label, String errorMsg){
         // Obten y verifica que el valor escrito en el campo sea un numero
         int val;
         try{
             val = Integer.parseInt(campo.getText().trim());
         } catch (NumberFormatException e){
-            label.setText(errorMsg);
+            etiquetaRoja(label, errorMsg);
             return -1; // Indica que el campo tiene un valor no numerico
         }
         return val;
+    }
+    
+    public static String strFecha(LocalDate fecha){
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+        return fecha.format(formatter);
     }
 }

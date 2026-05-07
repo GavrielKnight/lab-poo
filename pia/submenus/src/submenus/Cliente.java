@@ -10,12 +10,14 @@ public class Cliente implements Serializable {
     // Atributos
     private int id;
     private String nombre;
+    private String email;
     private List<Membresia> membresias = new ArrayList<>();
     
     // Constructor
-    public Cliente(int id, String nombre){
+    public Cliente(int id, String nombre, String email){
         this.id = id;
         this.nombre = nombre;
+        this.email = email;
     }
     
     // Getters
@@ -24,6 +26,7 @@ public class Cliente implements Serializable {
     }
     public int getId(){ return this.id; }
     public String getNombre(){ return this.nombre; }
+    public String getEmail() { return this.email; }
     public List<Membresia> getMembresias() { return this.membresias; }
     
     // Methods
@@ -32,13 +35,10 @@ public class Cliente implements Serializable {
     }
     public void renovarMembresia(int id){
         // Obten la nueva fecha de hoy
-        LocalDate date = LocalDate.now();
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-        String fechaHoy = date.format(formatter);
+        String fechaHoy = Main.strFecha(LocalDate.now());
         
         // Obten la nueva fecha de vencimiento
-        date = date.plusDays(3);
-        String fechaVencimiento = date.format(formatter);
+        String fechaVencimiento = Main.strFecha(LocalDate.now().plusDays(3));
         
         // Actualiza fechas de la membresia
         this.membresias.get(id).fechaInicio = fechaHoy;

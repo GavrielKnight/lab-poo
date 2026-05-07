@@ -19,19 +19,25 @@
     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
       <Label text="Tipo de membresía:" GridPane.rowIndex="1" />
       <Label text="Matrícula:" GridPane.rowIndex="2" />
       <TextField fx:id="idCampo" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-      <Button mnemonicParsing="false" onAction="#crearBotonPresionado" text="Crear" GridPane.rowIndex="4" />
+      <Button mnemonicParsing="false" onAction="#crearBotonPresionado" text="Crear" GridPane.rowIndex="7" />
       <ChoiceBox fx:id="membresiaChoicer" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
       <Label text="Crear membresía">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Label fx:id="label" GridPane.rowIndex="3" />
+      <Label fx:id="label" GridPane.rowIndex="6" />
+      <Label fx:id="labelDuracion" text="Duración:" GridPane.rowIndex="3" />
+      <Label fx:id="labelCosto" text="Costo:" GridPane.rowIndex="4" />
+      <Label fx:id="labelFechaInicio" text="Fecha de inicio:" GridPane.rowIndex="5" />
    </children>
 </GridPane>

@@ -20,12 +20,12 @@ public class EliminarMenu {
         // Muestra un mensaje si el cliente que se quiere eliminar no existe
         int indiceEliminar = Main.idExiste(id);
         if (indiceEliminar == -1){
-            label.setText("No existe cliente con esa matricula");
+            Main.etiquetaRoja(label, "No existe cliente con esa matricula");
             return;
         }
         
         // Elimina el cliente de la lista
         Main.clientes.remove(indiceEliminar);
-        label.setText("Se ha eliminado el cliente con matricula " + id);
+        Main.etiquetaVerde(label, "Se ha eliminado el cliente con matricula " + id);
     }
 }
