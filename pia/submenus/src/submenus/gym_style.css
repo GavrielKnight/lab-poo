@@ -1,0 +1,103 @@
+/* gym_style.css - Estilo Profesional y Limpio para GymPOS */
+
+/* 1) Fondo blanco y fuente general */
+.root {
+    -fx-background-color: #FFFFFF;
+    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+/* 2) Estilo para el título grande del submenú */
+/* En Scene Builder, selecciona el primer Label y en 'Style Class' escribe: titulo-submenu */
+.titulo-submenu {
+    -fx-font-size: 26px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2C3E50; /* Azul oscuro profesional */
+    -fx-padding: 10 0 20 0;
+}
+
+/* Estilo general para etiquetas de texto */
+.label {
+    -fx-text-fill: #34495E;
+    -fx-font-size: 14px;
+}
+
+/* 3) Look adecuado para los submenús de ejemplo */
+
+/* Campos de texto modernos */
+.text-field {
+    -fx-background-color: #F8F9F9;
+    -fx-border-color: #D5DBDB;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-padding: 8;
+    -fx-text-fill: #2C3E50;
+}
+
+.text-field:focused {
+    -fx-border-color: #3498DB; /* Azul al seleccionar */
+    -fx-background-color: #FFFFFF;
+}
+
+/* Botones con estilo moderno */
+.button {
+    -fx-background-color: #3498DB;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5;
+    -fx-padding: 10 25;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: #2980B9;
+}
+
+.button:pressed {
+    -fx-background-color: #21618C;
+}
+
+/* Estilo para las Tablas (Modificar Cliente / Renovar) */
+.table-view {
+    -fx-background-color: transparent;
+    -fx-border-color: #D5DBDB;
+    -fx-border-radius: 5;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #EAECEE;
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent transparent #D5DBDB transparent;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: #2C3E50;
+    -fx-font-weight: bold;
+}
+
+.table-row-cell {
+    -fx-background-color: #FFFFFF;
+    -fx-text-fill: #2C3E50;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #FDFEFE;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #D6EAF8;
+    -fx-text-fill: #1B4F72;
+}
+
+/* ChoiceBox (Selector de membresía) */
+.choice-box {
+    -fx-background-color: #F8F9F9;
+    -fx-border-color: #D5DBDB;
+    -fx-border-radius: 5;
+}
+
+.choice-box .label {
+    -fx-text-fill: #2C3E50;
+}

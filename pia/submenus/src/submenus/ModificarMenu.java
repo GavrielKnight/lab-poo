@@ -49,7 +49,7 @@ public class ModificarMenu {
         if (id == -1) return;
         
         // Muestra un mensaje si el cliente que se quiere eliminar no existe
-        int indice = Main.idExiste(id);
+        int indice = Main.clienteExiste(id);
         if (indice == -1){
             Main.etiquetaRoja(label, "No existe cliente con esa matricula");
             return;

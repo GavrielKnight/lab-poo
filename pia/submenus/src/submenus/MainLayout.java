@@ -4,23 +4,13 @@ import javafx.fxml.FXML;
 
 public class MainLayout {
     
-    @FXML
-    private void menuRegistrar(){
-        System.out.println("Boton de abrir menu de registrar presionado");
-        Main.loadPage("registrarMenu.fxml");
-    }
-    @FXML
-    private void menuEliminar(){
-        System.out.println("Boton de abrir menu de eliminar presionado");
-        Main.loadPage("eliminarMenu.fxml");
-    }
-    @FXML
-    private void menuModificar(){
-        System.out.println("Boton de abrir menu de modificar presionado");
-        Main.loadPage("modificarMenu.fxml");
-    }
+    @FXML private void menuRegistrar(){ if (Main.usuarioIngresado) Main.loadPage("registrarCliente.fxml"); }
     
-    @FXML private void menuCrearMembresia(){ Main.loadPage("crearMembresiaMenu.fxml"); }
+    @FXML private void menuEliminar(){ if (Main.usuarioIngresado) Main.loadPage("eliminarMenu.fxml"); }
     
-    @FXML private void menuRenovarMembresia() { Main.loadPage("renovarMembresia.fxml"); }
+    @FXML private void menuModificar(){ if (Main.usuarioIngresado) Main.loadPage("modificarCliente.fxml"); }
+    
+    @FXML private void menuCrearMembresia(){ if (Main.usuarioIngresado) Main.loadPage("crearMembresiaMenu.fxml"); }
+    
+    @FXML private void menuRenovarMembresia() { if (Main.usuarioIngresado) Main.loadPage("renovarMembresia.fxml"); }
 }

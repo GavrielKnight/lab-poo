@@ -6,7 +6,6 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.ChoiceBox;
 
 import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 
 public class CrearMembresiaMenu {
     
@@ -53,7 +52,7 @@ public class CrearMembresiaMenu {
         if (id == -1) return;
         
         // Checa que el usuario con ese id exista
-        int indice = Main.idExiste(id);
+        int indice = Main.usuarioExiste(id);
         if (indice == -1){
             Main.etiquetaRoja(label, "No existe usuario con esa matricula");
             return;

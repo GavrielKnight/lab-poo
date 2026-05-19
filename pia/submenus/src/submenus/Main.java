@@ -20,10 +20,11 @@ import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
 public class Main extends Application {
-    
     // Atributos
+    public static List<Usuario> usuarios = new ArrayList<>();
     public static List<Cliente> clientes = new ArrayList<>();
     
+    public static boolean usuarioIngresado = false;
     private static BorderPane mainLayout;
     
     // Funciones de arranque
@@ -33,12 +34,20 @@ public class Main extends Application {
     
     @Override
     public void start(Stage primaryStage) throws Exception{
+        // Crea dos usuarios
+        usuarios.add(new Usuario(1, "John Doe", "1235"));
+        usuarios.add(new Usuario(2, "Jane Doe", "5321"));
         
         // Carga la vista principal
         FXMLLoader loader = new FXMLLoader(getClass().getResource("mainLayout.fxml"));
         mainLayout = loader.load();
         
+        // Crea la escena
         Scene scene = new Scene(mainLayout, 800, 600);
+        
+        // Aplica estilo
+        scene.getStylesheets().add(getClass().getResource("gym_style.css").toExternalForm());
+        
         primaryStage.setTitle("GymPOS");
         primaryStage.setScene(scene);
         primaryStage.show();
@@ -101,7 +110,16 @@ public class Main extends Application {
         }
     }
     
-    public static int idExiste(int id){
+    public static int usuarioExiste(int id){
+        for (int i = 0; i < usuarios.size(); i++){
+            if (usuarios.get(i).getId() == id){
+                return i;
+            }
+        }
+        return -1;
+    }
+    
+    public static int clienteExiste(int id){
         for (int i = 0; i < clientes.size(); i++){
             if (clientes.get(i).getId() == id){
                 return i;

@@ -22,7 +22,7 @@ public class RegistrarMenu {
         if (id == -1) return;
         
         // Verifica que el id ingresado no exista
-        if (Main.idExiste(id) != -1){
+        if (Main.clienteExiste(id) != -1){
             Main.etiquetaRoja(label, "Ya existe cliente con esa matricula");
             return;
         }

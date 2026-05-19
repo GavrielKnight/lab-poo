@@ -5,44 +5,30 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="submenus.RenovarMembresia">
-  <columnConstraints>
-    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-  </columnConstraints>
-  <rowConstraints>
-      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-  </rowConstraints>
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="514.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="submenus.RenovarMembresia">
    <children>
-      <Label text="Matrícula del cliente:" GridPane.rowIndex="1" />
-      <TextField fx:id="campoIdCliente" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-      <Button mnemonicParsing="false" onAction="#renovarBotonPresionado" text="Renovar" GridPane.rowIndex="5" />
-      <Label text="Renovar membresía">
+      <Label layoutX="20.0" layoutY="367.0" text="Matrícula del cliente:" />
+      <TextField fx:id="campoIdCliente" layoutX="152.0" layoutY="363.0" />
+      <Button layoutX="20.0" layoutY="455.0" mnemonicParsing="false" onAction="#renovarBotonPresionado" text="Renovar" />
+      <Label layoutX="18.0" layoutY="32.0" text="Renovar membresía">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Label fx:id="label" GridPane.rowIndex="4" />
-      <TableView fx:id="tablaMembresias" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3">
-        <columns>
-            <TableColumn fx:id="colId" prefWidth="75.0" text="ID" />
-          <TableColumn fx:id="colTipo" prefWidth="75.0" text="Tipo" />
-          <TableColumn fx:id="colInicio" prefWidth="75.0" text="Fecha de creación" />
-            <TableColumn fx:id="colFin" prefWidth="75.0" text="Fecha de vencimiento" />
-            <TableColumn fx:id="colVencida" prefWidth="75.0" text="Vencida" />
-        </columns>
+      <Label fx:id="label" layoutX="21.0" layoutY="408.0" />
+      <TableView fx:id="tablaMembresias" layoutX="18.0" layoutY="78.0" prefHeight="200.0" prefWidth="560.0">
+         <columns>
+            <TableColumn fx:id="colId" prefWidth="49.60003471374512" text="ID" />
+            <TableColumn fx:id="colTipo" prefWidth="88.00006866455078" text="Tipo" />
+            <TableColumn fx:id="colInicio" prefWidth="171.99998474121094" text="Fecha de creación" />
+            <TableColumn fx:id="colFin" prefWidth="177.5999755859375" text="Fecha de vencimiento" />
+            <TableColumn fx:id="colVencida" minWidth="0.0" prefWidth="71.20001220703125" text="Vencida" />
+         </columns>
       </TableView>
-      <Label text="ID membresía:" GridPane.rowIndex="2" />
-      <TextField fx:id="campoIdMembresia" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <Label layoutX="21.0" layoutY="333.0" text="ID membresía:" />
+      <TextField fx:id="campoIdMembresia" layoutX="152.0" layoutY="329.0" />
    </children>
-</GridPane>
+</Pane>

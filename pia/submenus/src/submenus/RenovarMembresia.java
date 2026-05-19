@@ -71,7 +71,7 @@ public class RenovarMembresia {
         if (idCliente == -1) return;
         
         // Checa que la matricula exista
-        int indiceCliente = Main.idExiste(idCliente);
+        int indiceCliente = Main.clienteExiste(idCliente);
         if (indiceCliente == -1){
             Main.etiquetaRoja(label, "No existe usuario con esa matricula");
             return;
