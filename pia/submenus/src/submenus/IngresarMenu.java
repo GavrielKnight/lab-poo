@@ -16,8 +16,8 @@ public class IngresarMenu {
         if (id == -1) return;
         
         // Checa que el id ingresado exista
-        int indice = Main.usuarioExiste(id);
-        if (indice == -1){
+        Main.indiceUsuario = Main.usuarioExiste(id);
+        if (Main.indiceUsuario == -1){
             Main.etiquetaRoja(etiqueta, "No existe usuario con esa matrícula");
             return;
         }
@@ -30,18 +30,15 @@ public class IngresarMenu {
             Main.etiquetaRoja(etiqueta, "El campo de la contraseña no debe estar vacio");
             return;
         }
-        else if (!contraseña.equals(Main.usuarios.get(indice).getContraseña())){
+        else if (!contraseña.equals(Main.usuarios.get(Main.indiceUsuario).getContraseña())){
             Main.etiquetaRoja(etiqueta, "La contraseña es incorrecta");
             return;
         }
-        
-        // Marcar que el usuario ha ingresado
-        Main.usuarioIngresado = true;
         
         // Obten los clientes guardados en el archivo serial (si existe)
         Main.leeClientes();
         
         // Carga el menu de registro
-        Main.loadPage("registrarMenu.fxml");
+        Main.loadPage("registrarCliente.fxml");
     }
 }

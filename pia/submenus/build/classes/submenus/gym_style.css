@@ -6,20 +6,20 @@
     -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
 }
 
-/* 2) Estilo para el título grande del submenú */
-/* En Scene Builder, selecciona el primer Label y en 'Style Class' escribe: titulo-submenu */
-.titulo-submenu {
-    -fx-font-size: 26px;
+/* 2) Estilo para el título del submenú */
+/* En Scene Builder, 'Style Class': titulo */
+.titulo {
+    -fx-font-size: 24px;
     -fx-font-weight: bold;
     -fx-text-fill: #2C3E50; /* Azul oscuro profesional */
     -fx-padding: 10 0 20 0;
 }
 
 /* Estilo general para etiquetas de texto */
-.label {
+/*.label {
     -fx-text-fill: #34495E;
     -fx-font-size: 14px;
-}
+}*/
 
 /* 3) Look adecuado para los submenús de ejemplo */
 

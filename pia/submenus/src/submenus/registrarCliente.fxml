@@ -14,7 +14,7 @@
       <TextField fx:id="idCampo" layoutX="141.0" layoutY="90.0" />
       <Button layoutX="20.0" layoutY="264.0" mnemonicParsing="false" onAction="#botonRegistrarPresionado" text="Registrar" />
       <Label fx:id="label" layoutX="20.0" layoutY="217.0" />
-      <Label layoutX="20.0" layoutY="32.0" text="Registrar Cliente">
+      <Label layoutX="20.0" layoutY="32.0" styleClass="titulo" text="Registrar Cliente">
          <font>
             <Font size="20.0" />
          </font>

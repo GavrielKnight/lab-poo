@@ -25,7 +25,7 @@
       <Button layoutX="33.0" layoutY="468.0" mnemonicParsing="false" onAction="#botonModificarPresionado" text="Cambiar" />
       <Label layoutX="23.0" layoutY="354.0" text="Nuevo nombre:" />
       <TextField fx:id="campoNombre" layoutX="143.0" layoutY="350.0" />
-      <Label layoutX="22.0" layoutY="26.0" text="Modificar Clientes">
+      <Label layoutX="22.0" layoutY="26.0" styleClass="titulo" text="Modificar Clientes">
          <font>
             <Font size="20.0" />
          </font>

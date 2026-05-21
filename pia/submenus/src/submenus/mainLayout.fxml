@@ -22,6 +22,11 @@
                   <MenuItem mnemonicParsing="false" onAction="#menuRenovarMembresia" text="Renovar" />
                </items>
             </Menu>
+            <Menu mnemonicParsing="false" text="Usuario">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#menuInfoUsuario" text="Información" />
+               </items>
+            </Menu>
          </menus>
       </MenuBar>
    </top>

@@ -24,7 +24,7 @@ public class Main extends Application {
     public static List<Usuario> usuarios = new ArrayList<>();
     public static List<Cliente> clientes = new ArrayList<>();
     
-    public static boolean usuarioIngresado = false;
+    public static int indiceUsuario = -1;
     private static BorderPane mainLayout;
     
     // Funciones de arranque

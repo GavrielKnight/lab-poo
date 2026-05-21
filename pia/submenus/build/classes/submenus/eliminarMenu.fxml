@@ -24,7 +24,7 @@
       <TextField fx:id="idCampo" GridPane.columnIndex="1" GridPane.rowIndex="1" />
       <Button mnemonicParsing="false" onAction="#botonEliminarPresionado" text="Eliminar" GridPane.rowIndex="3" />
       <Label fx:id="label" GridPane.rowIndex="2" />
-      <Label text="Eliminar Cliente">
+      <Label styleClass="titulo" text="Eliminar Cliente">
          <font>
             <Font size="20.0" />
          </font>

@@ -30,7 +30,7 @@
       <TextField fx:id="idCampo" GridPane.columnIndex="1" GridPane.rowIndex="2" />
       <Button mnemonicParsing="false" onAction="#crearBotonPresionado" text="Crear" GridPane.rowIndex="7" />
       <ChoiceBox fx:id="membresiaChoicer" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-      <Label text="Crear membresía">
+      <Label styleClass="titulo" text="Crear membresía">
          <font>
             <Font size="18.0" />
          </font>

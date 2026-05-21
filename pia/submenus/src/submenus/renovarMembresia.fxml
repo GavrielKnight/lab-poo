@@ -13,7 +13,7 @@
       <Label layoutX="20.0" layoutY="367.0" text="Matrícula del cliente:" />
       <TextField fx:id="campoIdCliente" layoutX="152.0" layoutY="363.0" />
       <Button layoutX="20.0" layoutY="455.0" mnemonicParsing="false" onAction="#renovarBotonPresionado" text="Renovar" />
-      <Label layoutX="18.0" layoutY="32.0" text="Renovar membresía">
+      <Label layoutX="18.0" layoutY="32.0" styleClass="titulo" text="Renovar membresía">
          <font>
             <Font size="18.0" />
          </font>
