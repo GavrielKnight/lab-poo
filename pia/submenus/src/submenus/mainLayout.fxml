@@ -11,6 +11,7 @@
           <Button mnemonicParsing="false" onAction="#clientesBotonPresionado" text="Clientes" />
             <Button mnemonicParsing="false" onAction="#membresiasBotonPresionado" text="Membresias" />
             <Button mnemonicParsing="false" onAction="#inventarioBotonPresionado" text="Inventario" />
+            <Button mnemonicParsing="false" onAction="#calendarioBotonPresionado" text="Calendario" />
             <Button mnemonicParsing="false" onAction="#usuarioBotonPresionado" text="Usuario" />
         </items>
       </ToolBar>
