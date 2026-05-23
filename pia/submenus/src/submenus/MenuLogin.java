@@ -38,6 +38,9 @@ public class MenuLogin {
         // Obten los clientes guardados en el archivo serial (si existe)
         Main.leeClientes();
         
+        // Obten el inventario desde el archivo serial
+        Main.leeEquipo();
+        
         // Carga el menu de registro
         Main.loadPage("menuClientes.fxml");
     }

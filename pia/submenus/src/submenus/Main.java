@@ -153,7 +153,7 @@ public class Main extends Application {
             ObjectOutputStream out = new ObjectOutputStream(fileOut);
 
             // Escribe los datos en el archivo
-            out.writeObject(clientes);
+            out.writeObject(equipo);
 
             // Cierra archivo
             out.close(); fileOut.close();
