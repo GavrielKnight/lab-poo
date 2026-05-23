@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="597.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="submenus.MenuMembresias">
+   <children>
+      <Button layoutX="152.0" layoutY="470.0" mnemonicParsing="false" onAction="#renovarBotonPresionado" text="Renovar" />
+      <Label layoutX="18.0" layoutY="32.0" styleClass="titulo" text="Membresías">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="etiqueta" layoutX="21.0" layoutY="408.0" />
+      <TableView fx:id="tablaMembresias" layoutX="18.0" layoutY="78.0" prefHeight="200.0" prefWidth="913.0">
+         <columns>
+            <TableColumn fx:id="colIdCliente" prefWidth="86.39999008178711" text="ID del cliente" />
+            <TableColumn fx:id="colNombreCliente" prefWidth="230.40003967285156" text="Nombre del cliente" />
+            <TableColumn fx:id="colTipo" prefWidth="106.39996337890625" text="Tipo" />
+            <TableColumn fx:id="colInicio" prefWidth="189.5999755859375" text="Fecha de creación" />
+            <TableColumn fx:id="colFin" prefWidth="205.5999755859375" text="Fecha de vencimiento" />
+            <TableColumn fx:id="colEstado" minWidth="0.0" prefWidth="96.0001220703125" text="Estado" />
+         </columns>
+      </TableView>
+      <TextField fx:id="campoIdCliente" layoutX="152.0" layoutY="312.0" />
+      <Label layoutX="27.0" layoutY="367.0" text="Tipo de membresía:" />
+      <Label layoutX="30.0" layoutY="316.0" text="ID del cliente:" />
+      <Button layoutX="36.0" layoutY="470.0" mnemonicParsing="false" onAction="#asignarBotonPresionado" text="Asignar" />
+      <ChoiceBox fx:id="choicerTipo" layoutX="152.0" layoutY="363.0" prefWidth="150.0" />
+   </children>
+</Pane>

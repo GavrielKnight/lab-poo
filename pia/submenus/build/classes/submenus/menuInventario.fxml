@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="539.0" prefWidth="498.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="submenus.MenuInventario">
+   <children>
+      <Button layoutX="136.0" layoutY="481.0" mnemonicParsing="false" onAction="#modificarBotonPresionado" text="Modificar" />
+      <Label layoutX="18.0" layoutY="32.0" styleClass="titulo" text="Inventario">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="etiqueta" layoutX="30.0" layoutY="441.0" />
+      <TableView fx:id="tablaEquipo" layoutX="18.0" layoutY="78.0" prefHeight="200.0" prefWidth="462.0">
+         <columns>
+            <TableColumn fx:id="colId" prefWidth="51.19997787475586" text="ID" />
+            <TableColumn fx:id="colNombre" prefWidth="245.6000518798828" text="Nombre del equipo" />
+            <TableColumn fx:id="colEstado" prefWidth="163.5999755859375" text="Estado" />
+         </columns>
+      </TableView>
+      <TextField fx:id="campoNombre" layoutX="152.0" layoutY="355.0" />
+      <Label layoutX="29.0" layoutY="359.0" text="Nombre del equipo:" />
+      <Button layoutX="39.0" layoutY="481.0" mnemonicParsing="false" onAction="#agregarBotonPresionado" text="Agregar" />
+      <Button layoutX="242.0" layoutY="481.0" mnemonicParsing="false" onAction="#eliminarBotonPresionado" text="Eliminar" />
+      <Label layoutX="29.0" layoutY="399.0" text="Estado:" />
+      <ChoiceBox fx:id="choicerEstado" layoutX="151.0" layoutY="395.0" prefWidth="150.0" />
+      <Label layoutX="29.0" layoutY="323.0" text="ID:" />
+      <TextField fx:id="campoId" layoutX="151.0" layoutY="319.0" />
+   </children>
+</Pane>

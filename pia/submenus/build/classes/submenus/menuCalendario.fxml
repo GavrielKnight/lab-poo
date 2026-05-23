@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="650.0" prefWidth="950.0"
+            xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="submenus.MenuCalendario">
+
+    <children>
+
+        <VBox spacing="15.0"
+              AnchorPane.topAnchor="15.0"
+              AnchorPane.leftAnchor="15.0"
+              AnchorPane.rightAnchor="15.0"
+              AnchorPane.bottomAnchor="15.0">
+
+            <padding>
+                <Insets top="15" right="15" bottom="15" left="15"/>
+            </padding>
+
+            <!-- TITULO -->
+            <Label text="Calendario de Clases Grupales">
+                <font>
+                    <Font size="28.0" />
+                </font>
+            </Label>
+
+            <!-- FILTROS -->
+            <HBox spacing="12.0">
+
+                <VBox spacing="5.0">
+                    <Label text="Fecha" />
+                    <DatePicker fx:id="selectorFecha" prefWidth="170.0" />
+                </VBox>
+
+                <VBox spacing="5.0">
+                    <Label text="Clase" />
+                    <ComboBox fx:id="comboClase" prefWidth="180.0" />
+                </VBox>
+
+                <VBox spacing="5.0">
+                    <Label text="Instructor" />
+                    <ComboBox fx:id="comboInstructor" prefWidth="180.0" />
+                </VBox>
+
+                <VBox spacing="5.0">
+                    <Label text="Horario" />
+                    <ComboBox fx:id="comboHorario" prefWidth="150.0" />
+                </VBox>
+
+            </HBox>
+
+            <!-- BOTONES -->
+            <HBox spacing="10.0">
+                <Button fx:id="botonAgregar"
+                        mnemonicParsing="false"
+                        onAction="#agregarClase"
+                        prefHeight="35.0"
+                        prefWidth="150.0"
+                        text="Agregar Clase" />
+
+                <Button fx:id="botonEditar"
+                        mnemonicParsing="false"
+                        onAction="#editarClase"
+                        prefHeight="35.0"
+                        prefWidth="150.0"
+                        text="Editar Clase" />
+
+                <Button fx:id="botonEliminar"
+                        mnemonicParsing="false"
+                        onAction="#eliminarClase"
+                        prefHeight="35.0"
+                        prefWidth="150.0"
+                        text="Eliminar Clase" />
+
+                <Button fx:id="botonInscribir"
+                        mnemonicParsing="false"
+                        onAction="#inscribirCliente"
+                        prefHeight="35.0"
+                        prefWidth="170.0"
+                        text="Inscribir Cliente" />
+            </HBox>
+
+            <!-- TABLA -->
+            <TableView fx:id="tablaClases" prefHeight="380.0">
+                <columns>
+
+                    <TableColumn fx:id="colFecha"
+                                 prefWidth="120.0"
+                                 text="Fecha" />
+
+                    <TableColumn fx:id="colHora"
+                                 prefWidth="100.0"
+                                 text="Hora" />
+
+                    <TableColumn fx:id="colClase"
+                                 prefWidth="180.0"
+                                 text="Clase" />
+
+                    <TableColumn fx:id="colInstructor"
+                                 prefWidth="170.0"
+                                 text="Instructor" />
+
+                    <TableColumn fx:id="colCapacidad"
+                                 prefWidth="120.0"
+                                 text="Capacidad" />
+
+                    <TableColumn fx:id="colInscritos"
+                                 prefWidth="120.0"
+                                 text="Inscritos" />
+
+                    <TableColumn fx:id="colEstado"
+                                 prefWidth="120.0"
+                                 text="Estado" />
+
+                </columns>
+            </TableView>
+
+            <!-- DETALLES -->
+            <VBox spacing="8.0">
+
+                <Label text="Descripción de la clase">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Label>
+
+                <TextArea fx:id="areaDescripcion"
+                          editable="false"
+                          prefHeight="120.0"
+                          wrapText="true" />
+
+            </VBox>
+
+            <!-- MENSAJES -->
+            <Label fx:id="etiquetaEstado"
+                   style="-fx-text-fill: green; -fx-font-size: 14px;"
+                   text="Sistema listo" />
+
+        </VBox>
+
+    </children>
+
+</AnchorPane>

@@ -23,7 +23,6 @@ public class Main extends Application {
     // Atributos
     public static List<Usuario> usuarios = new ArrayList<>();
     public static List<Cliente> clientes = new ArrayList<>();
-    public static List<Equipo> equipo = new ArrayList<>();
     
     public static int indiceUsuario = -1;
     private static BorderPane mainLayout;
@@ -54,7 +53,7 @@ public class Main extends Application {
         primaryStage.show();
         
         // Carga la pagina
-        loadPage("menuLogin.fxml");
+        loadPage("ingresarMenu.fxml");
     }
         
     // Metodos
@@ -112,55 +111,21 @@ public class Main extends Application {
     }
     
     public static int usuarioExiste(int id){
-        for (int i = 0; i < usuarios.size(); i++)
-            if (usuarios.get(i).getId() == id) return i;
+        for (int i = 0; i < usuarios.size(); i++){
+            if (usuarios.get(i).getId() == id){
+                return i;
+            }
+        }
         return -1;
-    }  
+    }
+    
     public static int clienteExiste(int id){
-        for (int i = 0; i < clientes.size(); i++)
-            if (clientes.get(i).getId() == id) return i;
-        return -1;
-    }
-    public static int equipoExiste(int id){
-        for (int i = 0; i < equipo.size(); i++)
-            if (equipo.get(i).getId() == id) return i;
-        return -1;
-    }
-    
-    public static void leeEquipo(){
-        // Verifica que el archivo serial exista
-        File file = new File("equipo.ser");
-        if (!file.exists()){ System.out.println("El archivo no existe"); return; }
-        
-        try { // Accede al archivo serial
-            FileInputStream fileIn = new FileInputStream("equipo.ser");
-            ObjectInputStream in = new ObjectInputStream(fileIn);
-            
-            // Guarda clientes escritos en el archivo en la lista
-            equipo = (List<Equipo>) in.readObject();
-            
-            // Cierra archivo
-            in.close(); fileIn.close();
-            
-        } catch(IOException | ClassNotFoundException e){
-            System.out.println("Ha ocurrido un error. No se pudo leer el archivo de equipo");  
+        for (int i = 0; i < clientes.size(); i++){
+            if (clientes.get(i).getId() == id){
+                return i;
+            }
         }
-    }
-    
-    public static void guardaEquipo(){
-        try { // Obten acceso al archivo
-            FileOutputStream fileOut = new FileOutputStream("equipo.ser");
-            ObjectOutputStream out = new ObjectOutputStream(fileOut);
-
-            // Escribe los datos en el archivo
-            out.writeObject(clientes);
-
-            // Cierra archivo
-            out.close(); fileOut.close();
-            
-        } catch(IOException e){
-            System.out.println("Ha ocurrido un error. No se pudo guardar los datos del equipo");
-        }
+        return -1;
     }
     
     public static void etiquetaRoja(Label label, String msg) {
@@ -186,7 +151,7 @@ public class Main extends Application {
     }
     
     public static String strFecha(LocalDate fecha){
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
         return fecha.format(formatter);
     }
 }
